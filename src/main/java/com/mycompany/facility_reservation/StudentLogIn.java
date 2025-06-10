@@ -23,7 +23,7 @@ public class StudentLogIn extends javax.swing.JFrame {
 
     // Wait for layout to complete, then apply background
     SwingUtilities.invokeLater(() -> {
-        CommonMethods.setBackgroundImage(LogInPanel, "src\\main\\java\\com\\mycompany\\facility_reservation\\FacilityPictures\\LOGIN FINAL.png");
+        CommonMethods.setBackgroundImage(LogInPanel, "src\\main\\java\\com\\mycompany\\facility_reservation\\FacilityPictures\\LOGINFINALBG.png");
         LogInPanel.repaint();
     });
 }
@@ -39,28 +39,19 @@ public class StudentLogIn extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         LogInPanel = new javax.swing.JPanel();
-        NameTxtFld = new javax.swing.JTextField();
-        StudNumberTxtFld = new javax.swing.JTextField();
         XButton = new javax.swing.JButton();
-        DepTxtFld = new javax.swing.JTextField();
         LoginButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        DepTxtFld = new javax.swing.JTextField();
+        StudNumberTxtFld = new javax.swing.JTextField();
+        NameTxtFld = new javax.swing.JTextField();
+        StudentButton = new javax.swing.JRadioButton();
+        AdminButton = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         LogInPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        NameTxtFld.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        NameTxtFld.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Full Name", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Nirmala UI", 0, 14))); // NOI18N
-
-        StudNumberTxtFld.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        StudNumberTxtFld.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Student Number", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Nirmala UI", 0, 14))); // NOI18N
-        StudNumberTxtFld.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StudNumberTxtFldActionPerformed(evt);
-            }
-        });
 
         XButton.setContentAreaFilled(false);
         XButton.setFocusPainted(false);
@@ -70,14 +61,12 @@ public class StudentLogIn extends javax.swing.JFrame {
             }
         });
 
-        DepTxtFld.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        DepTxtFld.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Program and Section", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Nirmala UI", 0, 14))); // NOI18N
-
-        LoginButton.setBackground(new java.awt.Color(50, 97, 45));
         LoginButton.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
-        LoginButton.setText("Login");
         LoginButton.setBorder(null);
+        LoginButton.setBorderPainted(false);
+        LoginButton.setContentAreaFilled(false);
+        LoginButton.setFocusPainted(false);
         LoginButton.setFocusable(false);
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +82,19 @@ public class StudentLogIn extends javax.swing.JFrame {
             }
         });
 
+        DepTxtFld.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        DepTxtFld.setBorder(null);
+
+        StudNumberTxtFld.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        StudNumberTxtFld.setBorder(null);
+
+        NameTxtFld.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        NameTxtFld.setBorder(null);
+
+        buttonGroup1.add(StudentButton);
+
+        buttonGroup1.add(AdminButton);
+
         javax.swing.GroupLayout LogInPanelLayout = new javax.swing.GroupLayout(LogInPanel);
         LogInPanel.setLayout(LogInPanelLayout);
         LogInPanelLayout.setHorizontalGroup(
@@ -101,35 +103,47 @@ public class StudentLogIn extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(XButton, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogInPanelLayout.createSequentialGroup()
-                .addContainerGap(611, Short.MAX_VALUE)
+                .addContainerGap(620, Short.MAX_VALUE)
                 .addGroup(LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(NameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(StudNumberTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DepTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogInPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(204, 204, 204))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogInPanelLayout.createSequentialGroup()
+                                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(119, 119, 119))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogInPanelLayout.createSequentialGroup()
-                        .addGroup(LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(NameTxtFld, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
-                                .addComponent(StudNumberTxtFld, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(DepTxtFld, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(110, 110, 110))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LogInPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(204, 204, 204))))
+                        .addComponent(StudentButton)
+                        .addGap(129, 129, 129)
+                        .addComponent(AdminButton)
+                        .addGap(133, 133, 133))))
         );
         LogInPanelLayout.setVerticalGroup(
             LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LogInPanelLayout.createSequentialGroup()
                 .addComponent(XButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(298, 298, 298)
-                .addComponent(NameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(StudNumberTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DepTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addGap(258, 258, 258)
+                .addGroup(LogInPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LogInPanelLayout.createSequentialGroup()
+                        .addComponent(StudentButton)
+                        .addGap(43, 43, 43)
+                        .addComponent(NameTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(StudNumberTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(DepTxtFld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(182, Short.MAX_VALUE))
+                    .addGroup(LogInPanelLayout.createSequentialGroup()
+                        .addComponent(AdminButton)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -156,6 +170,8 @@ public class StudentLogIn extends javax.swing.JFrame {
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/programlogs","root","root");
+            
+        if(StudentButton.isSelected()){
                 String query = "SELECT * FROM users WHERE name = ? AND studentID = ? AND program = ?";
                 
                 PreparedStatement stmt = conn.prepareStatement(query);
@@ -175,19 +191,33 @@ public class StudentLogIn extends javax.swing.JFrame {
                 rs.close();
                 stmt.close();
                 
+        }else if(AdminButton.isSelected()){
+            String query = "SELECT * FROM admins WHERE adminID = ? AND adminName = ? AND adminProgram = ?";
+                
+                PreparedStatement stmt = conn.prepareStatement(query);
+                stmt.setString(1, StudNumberTxtFld.getText().toUpperCase());
+                stmt.setString(2, NameTxtFld.getText());
+                stmt.setString(3, DepTxtFld.getText());
+                
+                ResultSet rs = stmt.executeQuery();
+                
+                if (rs.next()) {
+                    dispose();
+                    MenuFrame.setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid Login Credentials", "Login Error", JOptionPane.ERROR_MESSAGE);
+                }
+        }
+                
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Invalid Login Credentials", "Login Error", JOptionPane.ERROR_MESSAGE);
-        }
+        } 
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         dispose();
         new Signup().setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
-
-    private void StudNumberTxtFldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudNumberTxtFldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_StudNumberTxtFldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,11 +260,13 @@ public class StudentLogIn extends javax.swing.JFrame {
     private CommonMethods User = new CommonMethods();
     private CommonMethods imageUtil = new CommonMethods();
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton AdminButton;
     private javax.swing.JTextField DepTxtFld;
     private static javax.swing.JPanel LogInPanel;
     private javax.swing.JButton LoginButton;
     private javax.swing.JTextField NameTxtFld;
     private javax.swing.JTextField StudNumberTxtFld;
+    private javax.swing.JRadioButton StudentButton;
     private javax.swing.JButton XButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
