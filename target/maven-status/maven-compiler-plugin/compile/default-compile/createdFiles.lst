@@ -5,6 +5,7 @@ com\mycompany\facility_reservation\ExecSuitePage$1.class
 com\mycompany\facility_reservation\CommonMethods.class
 com\mycompany\facility_reservation\HotKPage.class
 com\mycompany\facility_reservation\MainMenu$3.class
+com\mycompany\facility_reservation\BakingKitchenPage$2.class
 com\mycompany\facility_reservation\CircuitLabPage$1.class
 com\mycompany\facility_reservation\DemoKPage$1.class
 com\mycompany\facility_reservation\StudentLogIn.class
@@ -20,6 +21,7 @@ com\mycompany\facility_reservation\ZooLabPage.class
 com\mycompany\facility_reservation\TravelOfficePage$1.class
 com\mycompany\facility_reservation\BoardRoomPage$1.class
 com\mycompany\facility_reservation\DrawingLabPage$1.class
+com\mycompany\facility_reservation\BakingKitchenPage$3.class
 com\mycompany\facility_reservation\StudentLogIn$4.class
 com\mycompany\facility_reservation\CommonMethods$1.class
 com\mycompany\facility_reservation\Facility_Reservation.class

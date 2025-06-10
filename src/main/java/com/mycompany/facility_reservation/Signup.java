@@ -132,7 +132,7 @@ public class Signup extends javax.swing.JFrame {
 
     private void SignupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupButtonActionPerformed
     try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","8Puppiesarebest*");
+            Connection conn = DriverManager.getConnection("jjdbc:mysql://localhost:3306/programlogs","root","root");
             // Check if user already exists
             String checkQuery = "SELECT * FROM users WHERE studentID = ?";
             PreparedStatement checkStmt = conn.prepareStatement(checkQuery);

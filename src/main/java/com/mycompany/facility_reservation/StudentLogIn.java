@@ -155,7 +155,7 @@ public class StudentLogIn extends javax.swing.JFrame {
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","8Puppiesarebest*");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/programlogs","root","root");
                 String query = "SELECT * FROM users WHERE name = ? AND studentID = ? AND program = ?";
                 
                 PreparedStatement stmt = conn.prepareStatement(query);

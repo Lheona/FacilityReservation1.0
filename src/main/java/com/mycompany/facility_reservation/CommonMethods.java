@@ -61,7 +61,7 @@ public class CommonMethods implements CoreMethods{
     public void createConnection(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","8Puppiesarebest*");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/programlogs","root","root");
 
             System.out.println("Database connection successful");
         } catch (ClassNotFoundException ex) {
